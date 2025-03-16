@@ -24,7 +24,7 @@
 
 const num = [10, 20, 30, 40, 50]
 const data = num.map((nu,i) => {
- retrun `Index: ${i} value: ${nu}`
+ return (`Index: ${i} value: ${nu}`)
 })
 
 console.log(data);
