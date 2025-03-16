@@ -21,10 +21,10 @@
 //     res(message);
 //    })
 // }
-// //chaining promise
+ //chaining promise
 // newProm()
-// .then((result) => {
-//     console.log(result);
+// .then((re) => {
+//     console.log(re);
 //     return addProm();
 // })
 // .then((result) => {
@@ -35,23 +35,23 @@
 // })
 
 //promise.all
-const promiseOne = new Promise((res) => {
-    setTimeout(() => {
-        res('Promise One');
-    }, 1000);
-});
+// const promiseOne = new Promise((res) => {
+//     setTimeout(() => {
+//         res('Promise One');
+//     }, 1000);
+// });
 
-const promiseTwo = new Promise((res) => {
-    setTimeout(() => {
-        res('Promise Two');
-    }, 2000);
-});
+// const promiseTwo = new Promise((res) => {
+//     setTimeout(() => {
+//         res('Promise Two');
+//     }, 2000);
+// });
 
-const promiseThree = new Promise((res, rej) => {
-    setTimeout(() => {
-        rej('Promise Three faild');
-    }, 3000);
-});
+// const promiseThree = new Promise((res, rej) => {
+//     setTimeout(() => {
+//         rej('Promise Three rejected');
+//     }, 3000);
+// });
 
 // Promise.all([promiseOne, promiseTwo, promiseThree])
 //     .then((results) => {
@@ -110,23 +110,24 @@ const promiseThree = new Promise((res, rej) => {
 
 
 // //async and await
-// async function asaw() {
-//     try{
-//     const result = await newProm();
-//     console.log(result);
-//     console.log('make to wait newProm');
+async function asaw() {
+    try{
+    const result = await newProm();
+    console.log(result);
+    console.log('make to wait newProm');
     
 
-//     const result1 = await addProm();
-//     console.log('make to wait addProm');
-//     console
-//     .log(result1);
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
+    const result1 = await addProm();
+    console.log('make to wait addProm');
+    console
+    .log(result1);
+    }
+    catch(error){
+        console.log(error);
+    }
 
-// }
+}
+
 // asaw()
 // // .then(() => console.log('All done'))
 // // .catch((error) => console.log('error', error));

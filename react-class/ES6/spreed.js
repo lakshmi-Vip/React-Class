@@ -6,10 +6,11 @@
 
 // console.log(arrThree);
 
-// //copying array
-// let originalArray = [1,2,3,4,'5',6,7,8,9,10];
+//copying array
+// let originalArray = [1,2,3,4,5,6,7,8,9,10];
 // let copyArray = [...originalArray];
 // console.log(copyArray);
+
 // //combind object
 // let objOne = {name: 'John'};
 // let objTwo = {age: 25};
@@ -21,10 +22,10 @@ function sum(a,b,c) {
     return a + b + c;
 }
 
-function multiply(a,b,c) {
-    return a * b * c;
-}
+// function multiply(a,b,c) {
+//     return a * b * c;
+// }
 
-const numbers = [1,2,3];
-console.log(sum(...numbers));
-console.log(multiply(...numbers));
+ const numbers = [1,2,3];
+ console.log(sum(...numbers));
+// console.log(multiply(...numbers));
