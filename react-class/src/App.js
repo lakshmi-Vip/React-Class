@@ -10,6 +10,8 @@
 
 // export default App;
 import React, { useState, useEffect } from 'react';
+// import AddTodo from './Redux/src/components/AddTodo' // Import AddTodo component
+// import TodoList from './Redux/src/components/TodoList'; // Import TodoList component
 
 // function App() {
 //   const [count, setCount] = useState(0);
@@ -133,6 +135,10 @@ function App() {
        onChange={e => setnewCar(e.target.value)}
       ></input>
       <button onClick={addCar}>Submit</button>
+      {/* <h1>Todo App</h1> 
+            <AddTodo /> 
+            <TodoList /> */}
+
     </div>
   );
 }

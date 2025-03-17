@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,38 @@
   to {
     transform: rotate(360deg);
   }
+} */
+body {
+  font-family: Arial, sans-serif; 
+  /* // Set the font family */
+}
+
+.App {
+  text-align: center; 
+  margin-top: 50px; 
+}
+
+form {
+  margin-bottom: 20px; 
+}
+
+input {
+  padding: 10px; 
+  font-size: 16px; 
+}
+
+button {
+  padding: 10px 20px; 
+  font-size: 16px; 
+}
+
+ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+li {
+  padding: 10px; 
+  font-size: 18px; 
+  border-bottom: 1px solid #ddd; 
 }
