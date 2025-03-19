@@ -1,15 +1,21 @@
-// import './App.css';
-
-// function App() {
-//   return (
-//     <>
-//     <p>Redux</p>
-//     </>
-//   );
-// }
+import './App.css';
+import Greet, {Welcome} from './component/Greetmessage'
+import Greerting from './component/Class';
+import App1 from './component/Props';
+function App() {
+  return (
+    <>
+    <p>Redux</p>
+    <Greet name='laki' /> 
+    <Welcome place='Karnataka' capital='Bengaluru'/>
+    <Greerting />
+    <App1 />
+    </>
+  );
+}
 
 // export default App;
-import React, { useState, useEffect } from 'react';
+//import React, { useState, useEffect } from 'react';
 // import AddTodo from './Redux/src/components/AddTodo' // Import AddTodo component
 // import TodoList from './Redux/src/components/TodoList'; // Import TodoList component
 
@@ -81,69 +87,69 @@ import React, { useState, useEffect } from 'react';
 //     </div>
 //   );
 // }
-function App() {
-  const [count, setCount] = useState(0);
-  const [car, setCar] = useState([]);
-  const [newCar, setnewCar] = useState("");
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const [car, setCar] = useState([]);
+//   const [newCar, setnewCar] = useState("");
 
-  useEffect(() => {
-   const interval =  setInterval(() => {
-      setCount(count => count + 1);
-    }, 1000);
+//   useEffect(() => {
+//    const interval =  setInterval(() => {
+//       setCount(count => count + 1);
+//     }, 1000);
 
-    return () => clearInterval(interval)
-  }, []);
+//     return () => clearInterval(interval)
+//   }, []);
 
-  useEffect(() => {
-    setTimeout(() =>{
-      fetchData()
-    },5000)
-  },[])
+//   useEffect(() => {
+//     setTimeout(() =>{
+//       fetchData()
+//     },5000)
+//   },[])
 
- const fetchData = async () => {
-  try{
-    console.log('getdata')
-    const response = await fetch('https://myfakeapi.com/api/cars/')
-    const data = await response.json()
-    setCar(data.cars.slice(0,10))
-  } catch (error) {
-      console.log(error)
-  }
- }
+//  const fetchData = async () => {
+//   try{
+//     console.log('getdata')
+//     const response = await fetch('https://myfakeapi.com/api/cars/')
+//     const data = await response.json()
+//     setCar(data.cars.slice(0,10))
+//   } catch (error) {
+//       console.log(error)
+//   }
+//  }
 
- const addCar = () => {
-  if(newCar.trim() === "") return;
-    setCar([...car, newCar])
-    setnewCar('')
- }
+//  const addCar = () => {
+//   if(newCar.trim() === "") return;
+//     setCar([...car, newCar])
+//     setnewCar('')
+//  }
 
-  return (
-    <div className='App'>
-      <h1>Count: {count}</h1>
-      <h2>Cars list
-        <ul>
-          {car.length > 0 ? (car.map((c,i) => {
-           return  <li key={i}>
-              {c.make} {c.model} - {c.year}
-            </li>
-          })) : 'loading .....'}
-        </ul>
-        </h2>
-      <input 
-       type='text'
-       value={newCar}
-       onChange={e => setnewCar(e.target.value)}
-      ></input>
-      <button onClick={addCar}>Submit</button>
-      {/* <h1>Todo App</h1> 
-            <AddTodo /> 
-            <TodoList /> */}
+//   return (
+//     <div className='App'>
+//       <h1>Count: {count}</h1>
+//       <h2>Cars list
+//         <ul>
+//           {car.length > 0 ? (car.map((c,i) => {
+//            return  <li key={i}>
+//               {c.make} {c.model} - {c.year}
+//             </li>
+//           })) : 'loading .....'}
+//         </ul>
+//         </h2>
+//       <input 
+//        type='text'
+//        value={newCar}
+//        onChange={e => setnewCar(e.target.value)}/** */
+//       ></input>
+//       <button onClick={addCar} className={{color: 'blue'}}>Submit</button>
+//       {/* <h1>Todo App</h1> 
+//             <AddTodo /> 
+//             <TodoList /> */}
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
-// Log to console
-console.log('Hello console');
+// // Log to console
+// console.log('Hello console');
 
 export default App;
