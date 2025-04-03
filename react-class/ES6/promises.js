@@ -15,6 +15,7 @@
 //     })
 // }
 
+
 // const addProm = () =>{
 //    return new Promise((res,rej) =>{
 //     const message = 'This is a promise';
@@ -110,23 +111,36 @@
 
 
 // //async and await
-async function asaw() {
-    try{
-    const result = await newProm();
-    console.log(result);
-    console.log('make to wait newProm');
+// async function asaw() {
+//     try{
+//     const result = await newProm();
+//     console.log(result);
+//     console.log('make to wait newProm');
     
 
-    const result1 = await addProm();
-    console.log('make to wait addProm');
-    console
-    .log(result1);
+//     const result1 = await addProm();
+//     console.log('make to wait addProm');
+//     console
+//     .log(result1);
+//     }
+//     catch(error){const promiseFunc = () => {
+    const promiseFunc =()=>{
+   return new Promise((res,rej) =>{
+    const msg = true
+    if(msg) {
+        res('Hello')
+    } else {
+        rej('oops')
     }
-    catch(error){
-        console.log(error);
-    }
-
+    
+})
 }
+promiseFunc().then((m) => console.log(m))
+.catch((e) => console.log(e))
+//         console.log(error);
+//     }
+
+// }
 
 // asaw()
 // // .then(() => console.log('All done'))

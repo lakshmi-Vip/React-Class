@@ -2,14 +2,32 @@ import './App.css';
 import Greet, {Welcome} from './component/Greetmessage'
 import Greerting from './component/Class';
 import App1 from './component/Props';
+import EventHandelser,{SyntheticEvent, EventPoolingExample} from './component/Eventhandle'
+import BubbleApp from './component/Eventhandle';
+import EventDeligationApp from './component/Eventhandle';
+import Todo, {Counter} from './hooks/Usestate';
+import Useeffect,{UsersList} from './hooks/Useeffect';
+import Context from './hooks/Context';
+
 function App() {
   return (
     <>
     <p>Redux</p>
-    <Greet name='laki' /> 
+    {/* <Greet name='laki' /> 
     <Welcome place='Karnataka' capital='Bengaluru'/>
     <Greerting />
-    <App1 />
+    <App1 /> */}
+    {/* <EventHandelser />
+    <SyntheticEvent />
+    <EventPoolingExample /> */}
+    {/* <BubbleApp /> */}
+    {/* <EventDeligationApp /> */}
+    {/* <Todo /> */}
+    
+    <Useeffect />
+    {/* <UsersList /> */}
+    <Context />
+    {/* <Counter /> */}
     </>
   );
 }

@@ -113,3 +113,13 @@ apiCall1();
 // };
 
 // fetchData();
+//closure
+function Outer() {
+    const a=1;
+    const b=1;
+    return function Inner() {
+        return a + b;
+    }
+}
+const fun = Outer()
+console.log(fun)

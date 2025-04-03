@@ -8,9 +8,9 @@ function Card(props) {
         </div>
     );
 }
-export const DestructureProps = ({code='es6', exp='5'}) => {
-//   export  const DestructureProps = (props) => {
-//      const  {code,exp} = props
+//export const DestructureProps = ({code='es6', exp='5'}) => {
+  export  const DestructureProps = (props) => {
+     const  {code,exp} = props
     return (
         <div>
             <p>Extrating props by using the destructuring {code} and {exp}</p>
@@ -20,7 +20,8 @@ export const DestructureProps = ({code='es6', exp='5'}) => {
 
 function App1() {
     const showAlert = () => {
-        console.log('Hey button')
+        //console.log('Hey button')
+        alert('Hey Prop')
     };
 
     return( 
