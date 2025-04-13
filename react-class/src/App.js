@@ -8,7 +8,11 @@ import EventDeligationApp from './component/Eventhandle';
 import Todo, {Counter} from './hooks/Usestate';
 import Useeffect,{UsersList} from './hooks/Useeffect';
 import Context from './hooks/Context';
-
+import Useref from './hooks/Useref';
+import Reducer from './hooks/Reducer';
+import Usememo from './hooks/Usememo';
+import WithUseCallback,{WithoutUseCallback} from './hooks/Usecallback';
+import LayoutEffectExample from './hooks/Layout';
 function App() {
   return (
     <>
@@ -24,9 +28,17 @@ function App() {
     {/* <EventDeligationApp /> */}
     {/* <Todo /> */}
     
-    <Useeffect />
+    {/* <Useeffect /> */}
     {/* <UsersList /> */}
-    <Context />
+    {/* <Context />
+     */}
+     {/* <Useref /> */}
+{/* 
+     <Reducer />
+     <Usememo /> */}
+     <WithUseCallback />
+      <WithoutUseCallback />
+      <LayoutEffectExample />
     {/* <Counter /> */}
     </>
   );
